@@ -44,5 +44,3 @@
       (:help (:options parsed)) (println (:summary parsed))
       (:file (:options parsed)) (print (make-scad (edn/read-string (slurp (:file (:options parsed))))))
       :else (print (make-scad (edn/read-string (first (:arguments parsed))))))))
-
-  ;; (println (make-scad (grid [100 100] [5 5 1] [3 1] 10)))
